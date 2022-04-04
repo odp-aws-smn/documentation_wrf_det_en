@@ -23,5 +23,4 @@ Para cualquier cuestión relacionada con el contenido de este sitio, como sobre 
     Data_access
     Tutorials
     News_updates
-    Spanish_version 
-    `Spanish version link <https://odp-aws-smn.github.io/documentation_wrf_det/>`_
+    Spanish_version
