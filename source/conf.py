@@ -20,14 +20,18 @@ import sphinx_rtd_theme
 project = 'Documentation'
 copyright = 'Servicio Meteorológico Nacional 2022'
 author = 'Dirección Nacional de Ciencia e Innovación en Productos y Servicios'
-
 show_authors = True
+
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx_rtd_theme', 'myst_parser','sphinx_toolbox.sidebar_links']
+
+### VER ESTE LINK https://sphinx-toolbox.readthedocs.io/en/latest/extensions/sidebar_links.html
+
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
