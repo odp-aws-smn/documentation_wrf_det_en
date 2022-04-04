@@ -17,9 +17,9 @@ Para cualquier cuestión relacionada con el contenido de este sitio, como sobre 
     :maxdepth: 2
     :caption: Contenido:
 
-    Informacion_general
-    Estructura_de_datos
-    Formato_de_datos
-    Acceso_a_los_datos
-    Tutoriales
-    Novedades
+    General_information
+    Data_structure
+    Data_format
+    Data_access
+    Tutorials
+    News_updates
