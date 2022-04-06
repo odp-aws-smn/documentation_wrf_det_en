@@ -3,15 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-**SMN Hi-Res Weather Forecast over Argentina**
+**WRF-SMN High-Resolution weather forecast over Argentina**
 ====
 
-Desde el X de abril del 2022 el Servicio Meteorológico Nacional de Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) inició una nueva etapa en la disponibilización de sus datos de pronósticos producidos con el modelo WRF-SMN. Gracias a su nueva política de datos establecida en febrero de este año, y al apoyo de Amazon Web Services (AWS) con su programa Open Data Sponsorship Program, el SMN-Arg pone a disposición de los usuarios interesados un número importante de variables meteorológicas pronosticadas.
+Beginning in April 2022, the weather service of Argentina Servicio Meteorológico Nacional de Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) has started sharing data from its weather forecast carried out over southern south America with the Weather Research and Forecasting (WRF) model. The result of a new data policy within the SMN-Arg and the support of Amazon Web Services (AWS) through its Open Data Sponsorship Program, this initiative allows a variety of users to take advantage of a set of weather forecast variables. 
 
-En este sitio puede encontrarse tanto la información general sobre el modelo que genera los pronósticos, información sobre el formato de los datos y su forma de acceso, así como también ejemplos de uso y tutoriales.
+In this site users will find general information about the model, instructions regarding data format and access, along with examples and tutorials to facilitate data use.
 
-Para cualquier cuestión relacionada con el contenido de este sitio, como sobre preguntas o sugerencias por favor contactarnos al odp-aws@smn.gov.ar.
-
+For any question regarding content of this site, feedback or suggestions, please contact us at odp-aws@smn.gov.ar.
 
 .. toctree::
     :maxdepth: 2
