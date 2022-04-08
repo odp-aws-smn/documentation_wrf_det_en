@@ -21,5 +21,5 @@ For any question regarding content of this site, feedback or suggestions, please
     Data_format
     Data_access
     Tutorials
-    News_updates
+    News
     Spanish_version
