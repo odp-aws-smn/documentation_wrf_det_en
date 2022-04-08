@@ -1,33 +1,33 @@
 # Data access
 
-Los datos se encuentran disponibles en el **portal de AWS**: [https://registry.opendata.aws/smn-ar-wrf/](https://registry.opendata.aws/smn-ar-wrf/)
+Data are available at the **AWS portal**: [https://registry.opendata.aws/smn-ar-wrf/](https://registry.opendata.aws/smn-ar-wrf/)
 
-La descarga de los datos se puede realizar de las siguientes maneras:
+Downloading can be carried out in different ways:
 
-**vía URL**<br />
-Los archivos pueden ser descargados directamente accediendo al siguiente link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html)
+**URL adress**<br />
+Files can be download by simply going to the following link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html)
 
 **AWS CLI**<br /> 
-Los datos de S3 se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
-[link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
-Por ejemplo, para descargar el archivo del plazo 02 UTC del ciclo 00 UTC del día 21 de marzo 2022 ejecutar la siguiente línea: 
+This procedure makes use of routines proper to AWS. For more information regarding their use visit the following [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
+
+For example, to download the file with the second forecast hour from the 00 UTC cycle for March 21, 2022 we may write:  <br />
 ```bash
 #!/usr/bin/env bash
-aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc directorio_salida
+aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc output_path
 ```
-Para descargar todos los plazos del ciclo 00 UTC del día 21 de marzo 2022:
+
+To download all forecast times for the 00 UTC cycle for March 21, 2022 we may write:  <br />
 ```bash
 #!/usr/bin/env bash
-aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recursive directorio_salida
+aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recursive output_path
 ```
 
 **Python**<br />
-Utilizando la librería [s3sf](https://pypi.org/project/s3fs/) <br />
-Por ejemplo, para descargar los archivos del ciclo 00 UTC del día 21 de marzo 2022 ejecutar las siguientes líneas: <br />
+This can be done using the library [s3sf](https://pypi.org/project/s3fs/). <br />
+For example, to download the entire dataset for the 00 UTC cycle for March 21, 2022 we may write: <br />
 ```python
 import s3fs
-s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_000.nc'   # nombre del archivo a descargar 
+s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_000.nc'   # filename for download 
 fs = s3fs.S3FileSystem(anon=True)
 data = fs.get(s3_file)
 ```
-
