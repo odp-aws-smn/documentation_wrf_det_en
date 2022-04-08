@@ -9,7 +9,7 @@ Tutorials
 .. toctree::
     :maxdepth: 2
 
-    Prono_lat_lon_fecha
-    Meteograma
+    Fcst_lat_lon_date
+    Meteogram
     Region
     Regrid
