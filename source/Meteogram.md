@@ -1,6 +1,6 @@
-# Meteograma
+# Meteogram
 
-En este ejemplo se describe cómo hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en función de los plazos de pronóstico para una latitud y longitud determinada.
+In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place. 
 
 ```python
 import xarray as xr
@@ -11,22 +11,22 @@ import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
 ```
 
-Se define la fecha de inicialización del pronóstico y la latitud y longitud a consultar:
+We define the forecast initialization date, latitude and longitude of interest: 
 
 ```python
-latitud = -40
-longitud = -50
+latitude = -40
+longitude = -50
 
-año_ini = 2022
-mes_ini = 3
-dia_ini = 21
-hora_ini = 0
+start_year = 2022
+start_month = 3
+start_day = 21
+start_hour = 0
 ```
 
-Se leen los pronósticos:
+We read the forecast :
 
 ```python
-FECHA_INI = datetime.datetime(año_ini, mes_ini, dia_ini, hora_ini)
+START_DATE = datetime.datetime(start_year, start_month, start_day, start_hour)
 
 fs = s3fs.S3FileSystem(anon=True)
 
@@ -43,13 +43,13 @@ ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
 ```python
-# Se busca la ubicación del punto más cercano a la latitud y longitud solicitada
+# Searching the closest gridpoint to the selected lat-lon 
 data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
                                  central_latitude = ds.CEN_LAT, 
                                  standard_parallels = (ds.TRUELAT1, ds.TRUELAT2))
-x, y = data_crs.transform_point(longitud, latitud, src_crs=ccrs.PlateCarree())
+x, y = data_crs.transform_point(longitude, latitude, src_crs=ccrs.PlateCarree())
 
-# Se selecciona el dato más cercano a la latitud, longitud
+# Extraction of the value at the chosen gridpoint
 pronostico = ds.sel(dict(x = x, y = y), method = 'nearest')
 
 # Se obtiene la serie de temperatura a 2 m, precipitación acumulada y de fechas
