@@ -42,6 +42,9 @@ for s3_file in files:
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
+We get the appropriate forecast value:
+
+
 ```python
 # Searching the closest gridpoint to the selected lat-lon 
 data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
@@ -56,7 +59,11 @@ forecast = ds.sel(dict(x = x, y = y), method = 'nearest')
 T2 = forecast['T2']
 PP = forecast['PP']
 dates = forecast['time']
+```
 
+We create the plot:
+
+```python
 #  Plotting begins
 fig, ax = plt.subplots(figsize = (10, 8))
 # Doubling x axis
