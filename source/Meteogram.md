@@ -23,7 +23,7 @@ start_day = 21
 start_hour = 0
 ```
 
-We read the forecast :
+We read the forecast:
 
 ```python
 START_DATE = datetime.datetime(start_year, start_month, start_day, start_hour)
@@ -50,33 +50,33 @@ data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON,
 x, y = data_crs.transform_point(longitude, latitude, src_crs=ccrs.PlateCarree())
 
 # Extraction of the value at the chosen gridpoint
-pronostico = ds.sel(dict(x = x, y = y), method = 'nearest')
+forecast = ds.sel(dict(x = x, y = y), method = 'nearest')
 
-# Se obtiene la serie de temperatura a 2 m, precipitación acumulada y de fechas
-T2 = pronostico['T2']
-PP = pronostico['PP']
-fechas = pronostico['time']
+# Obtention of time series for the 2-m temperature, accumulated precipitation and dates 
+T2 = forecast['T2']
+PP = forecast['PP']
+dates = forecast['time']
 
-# Inicio la figura
+#  Plotting begins
 fig, ax = plt.subplots(figsize = (10, 8))
-# Duplico el eje x
+# Doubling x axis
 ax2 = ax.twinx()
-# Grafico la precipitación en barras
-ax.bar(fechas, PP, color = 'blue', width = 0.03, label = 'Precip. Acum.')
-# Grafico la tempertura con una linea
-ax2.plot(fechas, T2, color = 'red', label = 'Temp. 2 m', linewidth = 3)
-# Defino las etiquetas de los ejes
-ax.set_xlabel('Fecha')
+# Choosing bar diagram for precipitation 
+ax.bar(dates, PP, color = 'blue', width = 0.03, label = 'Precip. Acum.')
+# Choosing simple lines for temperature
+ax2.plot(dates, T2, color = 'red', label = 'Temp. 2 m', linewidth = 3)
+# Defining labels in the axes 
+ax.set_xlabel('Date')
 ax2.set_ylabel('T 2m (°C)')
 ax.set_ylabel('PP (mm)')
-# Defino el título de la figura
-plt.title(f'Temperatura a 2 m y precipitacion acumulada \n lat = {latitud:0.2f}, lon = {longitud:0.2f}')
-# Grafico la leyenda
+# Defining title of figure 
+plt.title(f'2-m temperature and accumulated precipitation at \n lat = {latitude:0.2f}, lon = {longitude:0.2f}')
+# Locating color legend in the upper right corner 
 fig.legend(loc = 'upper right')
-# Ajusto el gráfico al tamaño de la figura
+# Adjusting graphic size
 plt.tight_layout()
 ```
     
 ![png](../figuras/fig_meteograma.png)
     
-Para descargar la notebook acceder al siguiente [link](../notebooks/Meteograma.ipynb)
+To download this notebook visit the following [link](../notebooks/Meteograma.ipynb)
