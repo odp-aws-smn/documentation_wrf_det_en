@@ -25,25 +25,20 @@ Model grid is represented in a [*Lambert conformal*](https://www2.mmm.ucar.edu/w
 
 (\*) Variables debiased using surface observations. For more information about the methodology see [Cutraro y otros, 2020](http://hdl.handle.net/20.500.12160/1405). In case of failure in the debiasing procedure, raw data will be presented instead.
 
-For the minimum temperature (Tmin) of a given day, the value corresponds to a temperature registered between 00 and 12Z. For the maximum temperature (Tmax) of a given day, the value corresponds to a temperature registered between 12Z and 00Z of the following day.
+For the minimum temperature (Tmin) of a given day, the value corresponds to a temperature registered between 00 and 12 UTC. For the maximum temperature (Tmax) of a given day, the value corresponds to a temperature registered between 12 and 00 UTC of the following day.
 
-For example, the file WRFDETAR_24H_20220314_00_001.nc includes data from the 00Z forecasting cycle for the first forecast plazo  (first day) and contains the forecast minimum temperature for day 20220315 between 00Z and 12Z, while forecast maximum temperature for the same day will be found between 12Z and 00Z of the following day.
+For example, the file WRFDETAR_24H_20220314_00_001.nc includes data from the 00 UTC forecasting cycle for the first forecast period (001 here represents the first day) and contains the forecast minimum temperature for the day 20220315 between 00 and 12 UTC,and the forecast maximum temperature between 12 and 00 UTC of the same day.
 
-Por ejemplo, el archivo WRFDETAR_24H_20220314_00_001.nc que contiene los datos del ciclo 00Z para el primer plazo de pronóstico (1° día) tendrá la temperatura mínima pronosticada para el día 20220315 entre las 00Z y las 12Z y la temperatura máxima pronosticada para el día 20220315 entre las 12Z y las 00Z del día siguiente.
+Precipitation PP for a given day at time P corresponds to the amount accumulated between times P-1 and P. 
 
-Para el caso de la PP válida para el día X en el plazo P, el valor corresponde a la precipitación acumulada pronosticada entre el plazo P-1 y P.
+For example, the file WRFDETAR_01H_20220314_00_036.nc contains data from the 00 UTC forecasting cycle for the 36th forecast hour with accumulated precipitation for day 20220315 between 11 and 12 UTC.
 
-Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00Z para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 20220315 entre las 11Z y las 12Z.
 
-**Variables de coordenadas:**<br />
-|Variable   |Descripción   |Unidad   |Precisión   |
+**Coordinate variables:**<br />
+|Variable   |Description   |Unit   |Precision   |
 |---|---|---|---|
-|time   |Tiempo   |Horas desde el inicio del ciclo de pronóstico   |int   |
-|y   |Coordenada y   |Metros desde el centro de la proyección   |float32   |
-|x   |Coordenada x   |Metros desde el centro de la proyección   |float32   |
-|lat   |Latitud   |° (convención entre 90° y -90°)   |float32   |
-|lon   |Longitud   |° (convención entre -180° y 180°)   |float32   |
-
-
-
-
+|time   |Time   |Hours since the beginnig of the forecast cycle   |int   |
+|y   |y coordinate  |Meters from the center of the grid   |float32   |
+|x   |x coordinate  |Meters from the center of the grid   |float32   |
+|lat   |Latitude   |° (between 90° y -90°)   |float32   |
+|lon   |Longitude   |° (between -180° y 180°)   |float32   |
