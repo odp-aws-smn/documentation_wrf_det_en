@@ -2,17 +2,20 @@
 
 Files follow a format much used to organize multi-dimensional scientific data, the **NetCDF** (Network Common Data Form). In particular, this data follow the [CF](http://cfconventions.org/) convention. For more information on this format see this [link](https://docs.unidata.ucar.edu/netcdf-c/current/index.html).
 
-**Map projection:** <br />
+**Map projection** <br />
 Model grid is represented in a [*Lambert conformal*](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3/user_guide_V3.9/users_guide_chap3.html)  projection. The center of the model grid is located at -35° latitude and -65° longitude, and the spatial resolution is approximately 4 km.
 
-**Dimensions:**<br />
+**Dimensions**<br />
+Data dimensions are shown in the following table:
+
 |Dimension   |Value   |
 |---|---|
 | time  |1   |
 |y   |1249   |
 |x   |999   |
 
-**Variables:**<br />
+**Variables**<br />
+The list of variables available in the files are shown in the following table:
 |Variable   |Description   |Unit   |Precision   |
 |---|---|---|---|
 |PP   |Accumulated precipitation in a given time period   |mm   |float32   |
@@ -34,7 +37,8 @@ Precipitation PP for a given day at time P corresponds to the amount accumulated
 For example, the file WRFDETAR_01H_20220314_00_036.nc contains data from the 00 UTC forecasting cycle for the 36th forecast hour with accumulated precipitation for day 20220315 between 11 and 12 UTC.
 
 
-**Coordinate variables:**<br />
+**Coordinate variables**<br />
+The coordinate variables available in the files are shown in the following table:
 |Variable   |Description   |Unit   |Precision   |
 |---|---|---|---|
 |time   |Time   |Hours since the beginnig of the forecast cycle   |int   |
