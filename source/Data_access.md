@@ -9,16 +9,14 @@ Files can be download by simply going to the following link: [https://smn-ar-wrf
 
 **AWS CLI**<br /> 
 This procedure makes use of routines proper to AWS. For more information regarding their use visit the following [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
-
-For example, to download the file with the second forecast hour from the 00 UTC cycle for March 21, 2022 we may write:  <br />
+Here, we present two examples, to download an individual file and to download files from an entire directory:  <br />
 ```bash
 #!/usr/bin/env bash
+
+# to download the file with the second forecast hour from the 00 UTC cycle for March 21, 2022 to the output_path: 
 aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc output_path
-```
 
-To download all forecast times for the 00 UTC cycle for March 21, 2022 we may write:  <br />
-```bash
-#!/usr/bin/env bash
+# to download all forecast times for the 00 UTC cycle for March 21, 2022 to the output_path:
 aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recursive output_path
 ```
 
