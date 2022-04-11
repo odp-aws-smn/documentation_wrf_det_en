@@ -91,7 +91,7 @@ plt.tight_layout()
 
 ![png](../figuras/meteogram.png)
     
-To download this notebook visit the following [link](../notebooks/Meteogram.ipynb)
+To download this notebook visit the following [link](../notebooks/Meteogram.ipynb).
     
 
     
