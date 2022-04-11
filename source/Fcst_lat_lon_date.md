@@ -76,17 +76,3 @@ print(f'The forecast value for the variable {var} at latitude {latitude} and lon
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-1-983532ba68a3> in <module>()
-          1 # Searching the closest gridpoint to the selected lat-lon
-    ----> 2 data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
-          3                                  central_latitude = ds.CEN_LAT,
-          4                                  standard_parallels = (ds.TRUELAT1, ds.TRUELAT2))
-          5 x, y = data_crs.transform_point(longitude, latitude, src_crs=ccrs.PlateCarree())
-
-
-    NameError: name 'ccrs' is not defined
-
