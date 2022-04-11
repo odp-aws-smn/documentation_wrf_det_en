@@ -78,7 +78,7 @@ for s3_file in files:
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
-We select the data of the chose subdomain and we compute the mean value: 
+We select the data of the chosen subdomain and we compute the mean value: 
 
 
 ```python
@@ -120,5 +120,5 @@ plt.colorbar(cbar)
 
 ![png](../figuras/mean_HR.png)
 
-Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb).
+To download this notebook visit the following [link](../notebooks/Region.ipynb).
 
