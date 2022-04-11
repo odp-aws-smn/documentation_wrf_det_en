@@ -1,4 +1,4 @@
-# Meteogram
+# Meteogram viejo
 
 In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place. 
 
