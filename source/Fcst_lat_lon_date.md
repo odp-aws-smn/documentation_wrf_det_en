@@ -75,4 +75,7 @@ forecast = ds.sel(dict(x = x, y = y, time = FCST_DATE), method = 'nearest')[var]
 print(f'The forecast value for the variable {var} at latitude {latitude} and longitude {longitude} is: {forecast.values:0.2f}')
 ```
 
+    The forecast value for the variable T2 at latitude -25 and longitude -70 is: 27.21
+
+To download this notebook visit the following [link](../notebooks/Fcst_lat_lon_date.ipynb)
 
