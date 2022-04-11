@@ -11,7 +11,7 @@ where fields between curly brackets are defined as: <br />
 {day} = 2-digit number <br />
 {cycle} = 2-digit number indicating the model run <br />
 {frequency} = 2-digit number indicating the temporal resolution. For hourly data it takes the value 01, and for daily data 24. <br />
-{fhr} = 3-digit number for lead time. If frequency is 01H the lead time is in hours, if frequency is 24H is in days. 
+{fhr} = 3-digit number for lead time. If frequency is 01H the lead time is in hours, if frequency is 24H lead time is in days. 
 
 Examples:
 * /DATA/WRF/DET/2022/03/14/00/WRFDETAR_01H_20220314_00_005.nc corresponds to forecasts of hourly data initialized on 14th March 2022 00 UTC for lead time hours 05. 
