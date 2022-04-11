@@ -89,7 +89,7 @@ fig.legend(loc = 'upper right')
 plt.tight_layout()
 ```
 
-![png](../figuras/Meteograma.png)
+![png](../figuras/meteogram.png)
     
 To download this notebook visit the following [link](../notebooks/Meteogram.ipynb)
     
