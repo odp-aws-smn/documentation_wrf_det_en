@@ -4,8 +4,7 @@ File naming and structure are ordered under the following protocol:
 
 /DATA/WRF/{mode}/{year}/{month}/{day}/{cycle}/WRFDETAR_{frequency}H_{year}{month}{day}\_{cycle}_{fhr}.nc
 
-Where fields between curly brackets are defined as: <br />
-
+where fields between curly brackets are defined as: <br />
 {mode} = 3 capital letters indicating the scheme used, either deterministic or ensemble (DET o ENS) <br />
 {year} = 4-digit number <br />
 {month} = 2-digit number <br />
