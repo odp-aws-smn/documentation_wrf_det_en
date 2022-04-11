@@ -27,7 +27,7 @@ show_authors = True
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_rtd_theme', 'myst_parser','sphinx_toolbox.sidebar_links']
+extensions = ['sphinx_rtd_theme', 'myst_parser']
 
 ### VER ESTE LINK https://sphinx-toolbox.readthedocs.io/en/latest/extensions/sidebar_links.html
 
