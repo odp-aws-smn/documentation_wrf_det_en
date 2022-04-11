@@ -118,23 +118,7 @@ gl.right_labels = False
 plt.colorbar(cbar)
 ```
 
+![png](../figuras/mean_HR.png)
 
-
-
-    <matplotlib.colorbar.Colorbar at 0x7f1aad3d2550>
-
-
-
-    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:228: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
-      if len(multi_line_string) > 1:
-    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:280: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
-      for line in multi_line_string:
-    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:347: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
-      if len(p_mline) > 0:
-
-
-
-    
-![png](Region_files/Region_13_2.png)
-    
+Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb)
 
