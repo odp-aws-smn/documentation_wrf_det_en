@@ -1,4 +1,4 @@
-# Interpolación a retícula regular
+# Interpolación a retícula regular viejo
 
 En esta notebook se da un ejemplo de cómo transformar los datos que se encuentran en la proyección Conforme de Lambert a una retícula regular.
 
