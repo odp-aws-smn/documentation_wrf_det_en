@@ -22,10 +22,11 @@ aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recurs
 
 **Python**<br />
 This can be done using the library [s3sf](https://pypi.org/project/s3fs/). <br />
-For example, to download the entire dataset for the 00 UTC cycle for March 21, 2022 we may write: <br />
+For example, to download an individual file we may write: <br />
 ```python
 import s3fs
-s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_000.nc'   # filename for download 
+# to download the file with the second forecast hour from the 00 UTC cycle for March 21, 2022
+s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc'
 fs = s3fs.S3FileSystem(anon=True)
 data = fs.get(s3_file)
 ```
