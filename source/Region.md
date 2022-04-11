@@ -120,5 +120,5 @@ plt.colorbar(cbar)
 
 ![png](../figuras/mean_HR.png)
 
-Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb)
+Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb).
 
