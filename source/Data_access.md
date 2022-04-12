@@ -1,11 +1,12 @@
 # Data access
 
-Data are available at the **AWS portal**: [https://registry.opendata.aws/smn-ar-wrf/](https://registry.opendata.aws/smn-ar-wrf/)
+Data are available at the **AWS portal**: [https://registry.opendata.aws/smn-ar-wrf/](https://registry.opendata.aws/smn-ar-wrf/).
 
 Downloading can be carried out in different ways:
 
 **URL adress**<br />
-Files can be download by simply going to the following link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html)
+Files can be download by simply going to the following link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html).<br />
+Data are stored using the Amazon Simple Storage Service (S3). For more information about this tool visit https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html.
 
 **AWS CLI**<br /> 
 This procedure makes use of routines proper to AWS. For more information regarding their use visit the following [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
