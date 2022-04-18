@@ -26,7 +26,7 @@ The list of variables available in the files are shown in the following table:
 |Tmax   |Daily maximum temperature (\*)   |°C   |float32   |
 |Tmin   |Daily minimum temperature (\*)   |°C   |float32   |
 
-(\*) Variables debiased using surface observations. For more information about the methodology see <a href="http://hdl.handle.net/20.500.12160/1405" target="_blank">Cutraro et al., 2020</a>. In case of failure in the debiasing procedure, raw data will be presented instead.
+(\*) Variables debiased using surface observations. For more information about the methodology see <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1405" target="_blank">Cutraro et al., 2020</a>. In case of failure in the debiasing procedure, raw data will be presented instead.
 
 For the minimum temperature (Tmin) of a given day, the value corresponds to a temperature registered between 00 and 12 UTC. For the maximum temperature (Tmax) of a given day, the value corresponds to a temperature registered between 12 and 00 UTC of the following day.
 
