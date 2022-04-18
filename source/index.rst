@@ -10,8 +10,6 @@ Beginning in April 2022, the National Meteorological Service of Argentina (`SMN-
 
 In this site users will find general information about the model, instructions regarding data format and access, along with examples and tutorials to facilitate data use. The official AWS portal is `https://registry.opendata.aws/smn-ar-wrf-dataset/ <https://registry.opendata.aws/smn-ar-wrf-dataset/>`_.
 
-For any question regarding content of this site, feedback or suggestions, please contact us at odp-aws@smn.gov.ar.
-
 .. toctree::
     :maxdepth: 2
     :caption: Contenido:
