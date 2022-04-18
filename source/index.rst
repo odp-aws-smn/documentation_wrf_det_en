@@ -6,9 +6,17 @@
 **WRF-SMN High-Resolution weather forecast over Argentina**
 ====
 
-Beginning in April 2022, the National Meteorological Service of Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) has started sharing data from its weather forecast carried out over Southern South America with the Weather Research and Forecasting (WRF) model. The result of a new data policy within the SMN-Arg and the support of Amazon Web Services (AWS) through its Open Data Sponsorship Program, this initiative allows a variety of users to take advantage of a set of weather forecast variables. 
+Beginning in April 2022, the National Meteorological Service of Argentina (|SMN-Arg|) has started sharing data from its weather forecast carried out over Southern South America with the Weather Research and Forecasting (WRF) model. The result of a new data policy within the SMN-Arg and the support of Amazon Web Services (AWS) through its Open Data Sponsorship Program, this initiative allows a variety of users to take advantage of a set of weather forecast variables. 
 
-In this site users will find general information about the model, instructions regarding data format and access, along with examples and tutorials to facilitate data use. The official AWS portal is `https://registry.opendata.aws/smn-ar-wrf-dataset/ <https://registry.opendata.aws/smn-ar-wrf-dataset/>`_.
+.. |SMN-Arg| raw:: html
+
+   <a href="https://www.smn.gob.ar" target="_blank">SMN-Arg</a>  
+
+In this site users will find general information about the model, instructions regarding data format and access, along with examples and tutorials to facilitate data use. The official AWS portal is |https://registry.opendata.aws/smn-ar-wrf-dataset/|.
+  
+.. |https://registry.opendata.aws/smn-ar-wrf-dataset/| raw:: html
+
+   <a href="https://registry.opendata.aws/smn-ar-wrf-dataset/" target="_blank">https://registry.opendata.aws/smn-ar-wrf-dataset/</a>
 
 .. toctree::
     :maxdepth: 2
