@@ -1,4 +1,4 @@
-# Plotting a variable over a specified region:
+# Plotting a variable over a specified region
 
 Here we show the mean relative humidity field over a user-defined region.
 
