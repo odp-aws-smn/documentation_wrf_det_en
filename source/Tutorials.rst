@@ -9,7 +9,7 @@ Tutorials
 .. toctree::
     :maxdepth: 2
 
-    Fcst_lat_lon_date
-    Meteogram
-    Region
-    Regrid
+    Fcst_lat_lon_date_bilingue
+    Meteogram_bilingue
+    Region_bilingue
+    Regrid_bilingue
