@@ -1,4 +1,4 @@
-# Gráfico de una región
+# Plotting a variable over a specified region
 
 Ejemplo para el cálculo de la humedad relativa media en una región. <br />
 *Example of the mean relative humidity field over a user-defined region.*
