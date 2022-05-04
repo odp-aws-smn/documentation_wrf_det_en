@@ -10,7 +10,7 @@ The SMN-Arg operationally runs the high-resolution Weather Research and Forecast
 
 Our 72-h forecasts are set to a 4-km horizontal resolution and 45 vertical levels, with a top level at 10 hPa. Initial and hourly boundary conditions are taken from NCEP-NOAA Global Forecasting System Model (<a href="https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php" target="_blank">GFS</a>) at 0.25° horizontal resolution. <br />
 
-The domain of the forecast is defined in a Lambert conformal projection and is shown below: <br />
+The forecast domain is defined in a Lambert conformal projection and covers southern South America, including Argentina and adjacent oceans, as shown  below: <br />
 
 ![png](../figuras/dominioWRF4.png)  <br /> *WRF-Arg domain*
 
