@@ -1,6 +1,6 @@
 # General information
 
-The SMN-Arg operationally runs the high-resolution Weather Research and Forecasting (WRF) model for its main weather forecast activities. The version in use now utilizes the dynamical kernel Advanced Research WRF (ARW) version 4.0 (<a href="https://www2.mmm.ucar.edu/wrf/users/docs/technote/v4_technote.pdf" target="_blank">Skamarock et al., 2019</a>). This version allows for the explicit representation of convection and for variable time steps. The following parameterizations have been chosen: <br />
+The SMN-Arg operationally runs the high-resolution Weather Research and Forecasting (WRF) model for its main weather forecast activities. The version in use now is 4.0 and utilizes the dynamical kernel Advanced Research WRF (ARW) (<a href="https://www2.mmm.ucar.edu/wrf/users/docs/technote/v4_technote.pdf" target="_blank">Skamarock et al., 2019</a>). The model resolves convection explicitly with variable time step and was configured using the following parameterizations: <br />
 
 - Microphysics: WSM6 (one momento - 6 classes)
 - Longwave radiation: RRTM
