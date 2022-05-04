@@ -9,9 +9,9 @@ where fields between curly brackets are defined as: <br />
 {year} = 4-digit number <br />
 {month} = 2-digit number <br />
 {day} = 2-digit number <br />
-{initialization} = 2-digit number indicating the time of the model run <br />
+{initialization} = 2-digit number indicating the time of the model run (00 or 12) <br />
 {frequency} = 2-digit number indicating the temporal resolution. For hourly data it takes the value 01, and for daily data 24. <br />
-{fhr} = 3-digit number for lead time. If frequency is 01H the lead time is in hours, if frequency is 24H lead time is in days. 
+{fhr} = 3-digit number for lead time. For hourly data, takes values from 0 to 73 and the unit is hours. For daily data, takes values of 000, 001, 002 or 003 and the unit is days.
 
 All times are considered in relation to Universal Time Coordinated (UTC).
 
