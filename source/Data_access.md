@@ -9,7 +9,7 @@ Files can be download by simply going to the following link: <a href="https://sm
 Data are stored using the Amazon Simple Storage Service (S3). For more information about this tool visit <a href="https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html" target="_blank">https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html</a>.
 
 **AWS CLI**<br /> 
-This procedure makes use of routines proper to AWS. For more information regarding their use visit the following <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">link</a>.<br />
+This procedure makes use of routines proper to the tool AWS Command Line Interface (CLI). For more information regarding their use visit the following <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">link</a>.<br />
 Here, we present two examples, to download an individual file and to download files from an entire directory:  <br />
 ```bash
 #!/usr/bin/env bash
