@@ -16,15 +16,15 @@ Data dimensions are shown in the following table:
 
 **Variables**<br />
 The list of variables available in the files are shown in the following table:
-|Variable   |Description   |Unit   |Precision   |
-|---|---|---|---|
-|PP   |Accumulated precipitation in a given time period   |mm   |float32   |
-|HR2   |2-meter relative humidity   |%   |float32   |
-|T2   |2-meter temperature (\*)   |°C   |float32   |
-|dirViento10   |10-meter wind direction    |°   |float32   |
-|magViento10   |10-meter wind speed (\*)   |m/s   |float32   |
-|Tmax   |Daily maximum temperature (\*)   |°C   |float32   |
-|Tmin   |Daily minimum temperature (\*)   |°C   |float32   |
+|Variable   |Description   |Unit   |Precision   |Frequency   |
+|---|---|---|---|---|
+|PP   |Accumulated precipitation in a given time period   |mm   |float32   |01H   |
+|HR2   |2-meter relative humidity   |%   |float32   |01H   |
+|T2   |2-meter temperature (\*)   |°C   |float32   |01H   |
+|dirViento10   |10-meter wind direction    |°   |float32   |01H   |
+|magViento10   |10-meter wind speed (\*)   |m/s   |float32   |01H   |
+|Tmax   |Daily maximum temperature (\*)   |°C   |float32   |24H   |
+|Tmin   |Daily minimum temperature (\*)   |°C   |float32   |24H   |
 
 (\*) Variables debiased using surface observations. For more information about the methodology see <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1405" target="_blank">Cutraro et al., 2020</a>. In case of failure in the debiasing procedure, raw data will be presented instead.
 
