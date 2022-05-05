@@ -12,6 +12,6 @@ Our 72-h forecasts are set to a 4-km horizontal resolution and 45 vertical level
 
 The forecast domain is defined in a Lambert conformal projection and covers southern South America, including Argentina and adjacent oceans, as shown  below: <br />
 
-![png](../figuras/dominioWRF4.png)  <br /> *WRF-Arg domain*
+![png](../figuras/Figura_dominio_AWS.png)  <br /> _WRF-Arg domain delimited by red contour_
 
 More details about the model configuration can be found in this <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1402" target="_blank">link</a>.
