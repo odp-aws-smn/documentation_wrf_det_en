@@ -30,4 +30,4 @@ In this site users will find general information about the model, instructions r
     FAQs
     News
     Contact
-    Spanish_version
+    Version_castellano
