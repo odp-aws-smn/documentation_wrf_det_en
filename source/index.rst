@@ -19,7 +19,7 @@ In this site users will find general information about the model, instructions r
    <a href="https://registry.opendata.aws/smn-ar-wrf-dataset/" target="_blank">https://registry.opendata.aws/smn-ar-wrf-dataset/</a>
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Contenido:
 
     General_information

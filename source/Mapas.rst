@@ -3,14 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Tutorials
+Maps
 ==========
 
 .. toctree::
     :maxdepth: 2
 
-    Get_lat_lon_fecha
-    Meteogram
-    Mapas
-    Regrid
-
+    Mean_RH
+    T2m_streamlines
