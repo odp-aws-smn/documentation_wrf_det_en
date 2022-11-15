@@ -1,4 +1,4 @@
-# Pronóstico para una latitud, longitud y fecha determinada
+# Forecast for a specific latitude, longitude and date
 
 En este ejemplo se describe cómo obtener el pronóstico de una variable específica del dataset (temperatura a 2 m por ejemplo) en una latitud, longitud y fecha dadas. <br />
 *In this example we show how to obtain the forecast of a specific variable (2-meter temperature for example) for a given latitude, longitude and date.*
