@@ -18,7 +18,8 @@ Data dimensions are shown in the following table:
 The list of variables available in the files are shown in the following table:
 |Variable   |Description   |Unit   |Precision   |Frequency   |
 |---|---|---|---|---|
-|PP   |Accumulated precipitation in a given time period   |mm   |float32   |01H   |
+|PP   |10-min accumulated precipitation   |mm   |float32   |10M   |
+|PP   |Hourly accumulated precipitation   |mm   |float32   |01H   |
 |HR2   |2-meter relative humidity   |%   |float32   |01H   |
 |T2   |2-meter temperature (\*)   |°C   |float32   |01H   |
 |dirViento10   |10-meter wind direction    |°   |float32   |01H   |
@@ -41,7 +42,7 @@ For example, the file WRFDETAR_24H_20220314_00_001.nc includes data from the 00 
 
 Precipitation PP for a given day at time P corresponds to the amount accumulated between times P-1 and P. 
 
-For example, the file WRFDETAR_01H_20220314_00_036.nc contains data from the 00 UTC forecasting cycle for the 36th forecast hour with accumulated precipitation for day 20220315 between 11 and 12 UTC.
+For example, WRFDETAR_01H_20220314_00_036.nc file contains data from the 00 UTC forecasting run for the 36th forecast lead time with accumulated precipitation valid for March 15, 2022 between 11 and 12 UTC. In the case of WRFDETAR_10M_20220314_00_036.nc file contains the 10-min accumulated precipitation valid from 11 to 12 UTC.
 
 
 **Coordinate variables**<br />
