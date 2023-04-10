@@ -6,6 +6,8 @@
 Tutorials
 ==========
 
+**IMPORTANT NOTE: Please note that the Python libraries needed to run the following tutorials may be updated, affecting the compatibility between them.**
+
 .. toctree::
     :maxdepth: 2
 
