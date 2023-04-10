@@ -1,4 +1,4 @@
-# Pronóstico para una latitud, longitud y fecha determinada
+# Forecast for a specific latitude, longitude and date
 
 (Last update 10 apr 2023) <br />
 
