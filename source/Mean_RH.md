@@ -1,4 +1,4 @@
-# Campo de humedad relativa media diaria
+# Field of daily mean relative humidity
 
 (Last update 10 apr 2023) <br />
 
