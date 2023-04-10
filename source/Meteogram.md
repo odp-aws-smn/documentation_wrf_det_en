@@ -1,4 +1,4 @@
-# Meteograma
+# Meteogram
 
 (Last update 10 apr 2023) <br />
 
