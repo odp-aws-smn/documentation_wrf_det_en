@@ -1,5 +1,7 @@
 # Interpolation to a regular grid
 
+(Last update 10 apr 2023) <br />
+
 En esta notebook mostramos cómo transformar los datos que se encuentran en la proyección Conforme de Lambert a una proyección cilíndrica de modo que queden en una retícula regular.<br />
 *We  show an example of how to transform a dataset that is in a Lambert conformal projection to a regular grid (equirectangular projection).*
 
