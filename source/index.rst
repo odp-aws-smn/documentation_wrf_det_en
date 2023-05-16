@@ -29,5 +29,6 @@ In this site users will find general information about the model, instructions r
     Tutorials
     FAQs
     News
+    Newsletter_suscription
     Contact
     Version_castellano
