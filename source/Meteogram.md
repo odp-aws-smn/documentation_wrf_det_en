@@ -34,23 +34,25 @@ longitude = -50
 Leemos los pronósticos: <br />
 *We read the forecast:*
 
-
 ```python
+# Descomentar la opción elegida:
 
+# --------
 # Opción 1: Para acceder a los archivos online
 # Option 1: To access files online
+#!pip install s3fs
 #import s3fs
 #fs = s3fs.S3FileSystem(anon=True)
-
-#files = fs.glob(f'smn-ar-wrf/DATA/WRF/DET/{START_DATE:%Y/%m/%d/%H}/WRFDETAR_01H_{START_DATE:%Y%m%d_%H}_*.nc')
-
+#files = fs.glob(f'smn-ar-wrf/DATA/WRF/DET/{INIT_DATE:%Y/%m/%d/%H}/WRFDETAR_01H_{INIT_DATE:%Y%m%d_%H}_*.nc')
 #ds_list = []
 #for s3_file in files:
 #    print(s3_file)
 #    f = fs.open(s3_file)
 #    ds_tmp = xr.open_dataset(f, decode_coords = 'all', engine = 'h5netcdf')
 #    ds_list.append(ds_tmp)
+# --------
 
+# --------
 # Opción 2: Para abrir los archivos ya descargados
 # Option 2: To open the already downloaded files
 files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(0, 73)]
@@ -59,6 +61,7 @@ for file in files:
     print(file)
     ds_tmp = xr.open_dataset(file, decode_coords = 'all', engine = 'h5netcdf')
     ds_list.append(ds_tmp)
+# --------
 
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 
