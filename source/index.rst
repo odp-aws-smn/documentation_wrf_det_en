@@ -6,7 +6,7 @@
 **WRF-SMN High-Resolution weather forecast over Argentina**
 ====
 
-Beginning in April 2022, the National Meteorological Service of Argentina (|SMN-Arg|) has started a new stage in sharing data from its numerical weather forecast system carried out over Southern South America with the Weather Research and Forecasting (WRF) model. The result of a new data policy within the SMN-Arg and the support of Amazon Web Services (AWS), through its Open Data Sponsorship Program, allows interested users to take advantage of forecasts of a significant number of surface meteorological variables initialized at 00 and 12 UTC. 
+Beginning in April 2022, the National Meteorological Service of Argentina (|SMN-Arg|) has started a new stage in sharing data from its numerical weather forecast system carried out over Southern South America with the Weather Research and Forecasting (WRF) model. The result of a new data policy within the SMN-Arg and the support of Amazon Web Services (AWS), through its Open Data Sponsorship Program, allows interested users to take advantage of forecasts of a significant number of surface meteorological variables initialized at 00, 06, 12 and 18 UTC. 
 
 .. |SMN-Arg| raw:: html
 
