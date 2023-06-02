@@ -1,6 +1,6 @@
 # Meteogram
 
-(Last update 10 apr 2023) <br />
+(Last update 1 jun 2023) <br />
 
 En este ejemplo discribimos como hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en todos los plazos de pronóstico para una latitud y longitud determinada.<br />
 *In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place.*
@@ -93,7 +93,6 @@ dates = forecast['time'].values
 
 Realizamos la figura:<br /> 
 *We create the plot:*
-
 
 ```python
 # Iniciamos de la figura
