@@ -1,6 +1,6 @@
-# Meteogram
+# Meteograma
 
-(Last update 1 jun 2023) <br />
+(Última actualización 1 jun 2023)
 
 En este ejemplo discribimos como hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en todos los plazos de pronóstico para una latitud y longitud determinada.<br />
 *In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place.*
@@ -34,6 +34,7 @@ longitude = -50
 Leemos los pronósticos: <br />
 *We read the forecast:*
 
+
 ```python
 # Descomentar la opción elegida:
 
@@ -55,13 +56,12 @@ Leemos los pronósticos: <br />
 # --------
 # Opción 2: Para abrir los archivos ya descargados
 # Option 2: To open the already downloaded files
-files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(0, 73)]
-ds_list = []
-for file in files:
-    print(file)
-    ds_tmp = xr.open_dataset(file, decode_coords = 'all', engine = 'h5netcdf')
-    ds_list.append(ds_tmp)
-# --------
+#files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(0, 73)]
+#ds_list = []
+#for file in files:
+#    print(file)
+#    ds_tmp = xr.open_dataset(file, decode_coords = 'all', engine = 'h5netcdf')
+#    ds_list.append(ds_tmp)
 
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 
@@ -94,6 +94,7 @@ dates = forecast['time'].values
 Realizamos la figura:<br /> 
 *We create the plot:*
 
+
 ```python
 # Iniciamos de la figura
 # We generate the plot
@@ -122,7 +123,6 @@ fig.legend(loc = 'upper right')
 # We adjuste graphic size
 plt.tight_layout()
 ```
-
 
 ![png](../figuras/Meteogram.png)
 
