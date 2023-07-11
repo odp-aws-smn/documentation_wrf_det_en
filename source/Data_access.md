@@ -33,7 +33,7 @@ data = fs.get(s3_file)
 ```
 
 **R**<br />
-This can be done using the library aws.s3. <br />
+This can be done using the library <a href="https://cran.r-project.org/web/packages/aws.s3/index.html" target="_blank">aws.s3</a>. <br />
 For example, to download all the files for 1 day: 
 ```R
 library("aws.s3")
