@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data access &mdash; documentación de Documentation - </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Tutorials" href="../Tutorials/" />
+    <link rel="prev" title="Data format" href="../Data_format/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> Documentation
+            <img src="../_static/smn_horizontal_arg-01.jpg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../General_information/">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data_structure/">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Data_format/">Data format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials/">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQs/">FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../News/">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contact/">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Version_castellano/">Versión en español</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Data access</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Data_access.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-access">
+<h1>Data access<a class="headerlink" href="#data-access" title="Enlace permanente a este encabezado"></a></h1>
+<p>Data are available at the <strong>AWS portal</strong>: <a href="https://registry.opendata.aws/smn-ar-wrf/" target="_blank">https://registry.opendata.aws/smn-ar-wrf/</a>.</p>
+<p>Downloading can be carried out in different ways:</p>
+<p><strong>URL adress</strong><br />
+Files can be download by simply going to the following link: <a href="https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html" target="_blank">https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html</a>.<br />
+Data are stored using the Amazon Simple Storage Service (S3). For more information about this tool visit <a href="https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html" target="_blank">https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html</a>.</p>
+<p><strong>AWS CLI</strong><br />
+This procedure makes use of routines proper to the tool AWS Command Line Interface (CLI). For more information regarding their use visit the following <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">link</a>.<br />
+Here, we present two examples, to download an individual file and to download files from an entire directory:  <br /></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># to download the file with the second forecast hour from the 00 UTC cycle for March 21, 2022 to the output_path: </span>
+aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc output_path
+
+<span class="c1"># to download all forecast times for the 00 UTC cycle for March 21, 2022 to the output_path:</span>
+aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recursive output_path
+</pre></div>
+</div>
+<p><strong>Python</strong><br />
+This can be done using the library <a href="https://pypi.org/project/s3fs/" target="_blank">s3sf</a>. <br />
+For example, to download an individual file we may write: <br /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="c1"># to download the file with the second forecast hour from the 00 UTC cycle for March 21, 2022</span>
+<span class="n">s3_file</span> <span class="o">=</span> <span class="s1">&#39;s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc&#39;</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s3_file</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>R</strong><br />
+This can be done using the library aws.s3. <br />
+For example, to download all the files for 1 day:</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;aws.s3&quot;</span><span class="p">)</span>
+ 
+<span class="c1"># Define the function wrf.download to download the files</span>
+<span class="n">wrf.download</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">wrf.name</span> <span class="o">=</span> <span class="n">wrf.name</span><span class="p">){</span>
+      <span class="nf">save_object</span><span class="p">(</span>
+      <span class="n">object</span> <span class="o">=</span> <span class="nf">paste0</span><span class="p">(</span><span class="n">wrf.name</span><span class="p">),</span>
+      <span class="n">bucket</span> <span class="o">=</span> <span class="s">&quot;s3://smn-ar-wrf/&quot;</span><span class="p">,</span>
+      <span class="n">region</span> <span class="o">=</span> <span class="s">&quot;us-west-2&quot;</span><span class="p">,</span>
+      <span class="n">file</span> <span class="o">=</span> <span class="nf">substring</span><span class="p">(</span><span class="n">wrf.name</span><span class="p">,</span> <span class="m">28</span><span class="p">),</span>
+      <span class="n">overwrite</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)}</span>
+
+<span class="c1"># Define the date of the data</span>
+<span class="n">anual</span> <span class="o">=</span> <span class="m">2022</span>
+<span class="n">mes</span> <span class="o">=</span> <span class="m">9</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="m">3</span>
+<span class="n">ciclo</span> <span class="o">=</span> <span class="m">0</span>
+<span class="n">time</span> <span class="o">=</span> <span class="s">&quot;01H&quot;</span>   <span class="c1"># Frequency of the forecast of interest 01H or 24H (string format) </span>
+
+<span class="c1"># The input date is converted to string</span>
+<span class="n">anual</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%04d&quot;</span><span class="p">,</span> <span class="n">anual</span><span class="p">)</span>
+<span class="n">mes</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%02d&quot;</span><span class="p">,</span> <span class="n">mes</span><span class="p">)</span>
+<span class="n">dia</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%02d&quot;</span><span class="p">,</span> <span class="n">dia</span><span class="p">)</span>
+<span class="n">ciclo</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%02d&quot;</span><span class="p">,</span> <span class="n">ciclo</span><span class="p">)</span>
+ 
+<span class="c1"># The names of the files are defined</span>
+<span class="n">wrf.names</span> <span class="o">&lt;-</span> <span class="nf">get_bucket_df</span><span class="p">(</span>
+    <span class="n">bucket</span> <span class="o">=</span> <span class="s">&quot;s3://smn-ar-wrf/&quot;</span><span class="p">,</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;DATA/WRF/DET/&quot;</span><span class="p">,</span> <span class="n">anual</span><span class="p">,</span> <span class="s">&quot;/&quot;</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="s">&quot;/&quot;</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="s">&quot;/&quot;</span><span class="p">,</span> <span class="n">ciclo</span><span class="p">),</span>
+    <span class="n">max</span> <span class="o">=</span> <span class="kc">Inf</span><span class="p">,</span>
+    <span class="n">region</span> <span class="o">=</span> <span class="s">&quot;us-west-2&quot;</span><span class="p">)</span>
+ 
+<span class="n">wrf.names.rows</span> <span class="o">&lt;-</span> <span class="nf">which</span><span class="p">(</span><span class="nf">grepl</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">wrf.names</span><span class="o">$</span><span class="n">Key</span><span class="p">,</span> <span class="n">fixed</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">==</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">wrf.names</span> <span class="o">&lt;-</span> <span class="n">wrf.names</span><span class="p">[</span><span class="n">wrf.names.rows</span><span class="p">,</span> <span class="p">]</span>
+ 
+<span class="c1"># We run the función wrf.download </span>
+<span class="nf">lapply</span><span class="p">(</span><span class="n">wrf.names</span><span class="o">$</span><span class="n">Key</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">wrf.download</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../Data_format/" class="btn btn-neutral float-left" title="Data format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../Tutorials/" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Servicio Meteorológico Nacional 2022.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
