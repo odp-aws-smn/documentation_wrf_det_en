@@ -27,7 +27,7 @@ show_authors = True
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_rtd_theme', 'myst_parser']
+extensions = ['sphinx_rtd_theme', 'myst_parser', 'nbsphinx']
 
 ### VER ESTE LINK https://sphinx-toolbox.readthedocs.io/en/latest/extensions/sidebar_links.html
 
@@ -53,6 +53,13 @@ source_suffix = {
     '.txt': 'markdown',
     '.md': 'markdown',
 }
+
+nbsphinx_prolog = r"""
+.. note::
+    | To download the notebook, go to the following `link <https://github.com/odp-aws-smn/documentation_wrf_det_en/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
+
+"""
+
 
 # -- Options for HTML output -------------------------------------------------
 

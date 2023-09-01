@@ -30,6 +30,7 @@ The list of variables available in the files are shown in the following table:
 |ACSWDNB   |Incoming shortwave radiation (\**)   |J/m2   |float32   |01H   |
 |TSLB   |Soil temperature in 0-10cm layer |°C   |float32   |01H   |
 |SMOIS   |Soil moisture in 0-10cm layer |m3/m3   |float32   |01H   |
+|Freezing_level   |Height above mean sea level of 0°C temperature   |m  |float32   |01H   |
 |Tmax   |Daily maximum temperature (\*)   |°C   |float32   |24H   |
 |Tmin   |Daily minimum temperature (\*)   |°C   |float32   |24H   |
 
